@@ -662,6 +662,26 @@ a { color: var(--accent-text); }
   .form-row, .form-row-3 { grid-template-columns: 1fr; }
   .search-result-heading { flex-direction: column; }
 }
+/* How-to steps */
+.howto { margin-top: 18px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface-2); }
+.howto-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.howto-head .eyebrow { margin: 0; }
+.howto-head h3 { margin: 0; flex: 1; font-size: var(--fs-sm); font-weight: 600; }
+.howto-play { width: 28px; height: 28px; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--surface); color: var(--muted); font-size: 10px; cursor: pointer; }
+.howto-play:hover { color: var(--accent-text); border-color: var(--accent); }
+.howto-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.howto-steps li { position: relative; overflow: hidden; border-radius: 10px; opacity: 0; animation: howto-in 0.45s cubic-bezier(.2,.8,.2,1) forwards; animation-delay: calc(var(--i) * 90ms); }
+.howto-steps button { display: flex; gap: 10px; align-items: flex-start; width: 100%; padding: 8px 10px; border: 0; background: transparent; color: var(--muted); font: inherit; font-size: var(--fs-sm); line-height: 1.45; text-align: left; cursor: pointer; transition: background 0.3s, color 0.3s; }
+.howto-num { flex: none; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--line-strong); font-size: var(--fs-xs); font-weight: 600; transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.3s; }
+.howto-steps li.is-done .howto-num { border-color: var(--accent); color: var(--accent-text); }
+.howto-steps li.is-active button { background: var(--accent-soft); color: var(--ink, inherit); }
+.howto-steps li.is-active .howto-num { background: var(--accent); border-color: var(--accent); color: #fff; transform: scale(1.1); animation: howto-pulse 1.6s ease-out infinite; }
+.howto-bar { position: absolute; left: 0; bottom: 0; height: 2px; width: 0; background: var(--accent); }
+.howto-steps.is-playing li.is-active .howto-bar { animation: howto-progress 3.2s linear forwards; }
+@keyframes howto-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes howto-progress { to { width: 100%; } }
+@keyframes howto-pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent); } 100% { box-shadow: 0 0 0 8px transparent; } }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
 }

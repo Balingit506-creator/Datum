@@ -1,144 +1,1405 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f5f2ec">
-    <meta name="description" content="Datum: browser-based measuring tools, material calculators, and Philippine architectural planning standards.">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f2ec" />
+    <meta
+      name="description"
+      content="Datum: browser-based measuring tools, material calculators, and Philippine architectural planning standards."
+    />
     <title>Datum · Measure, estimate, plan</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ff6a00'/%3E%3Cpath d='M6 11h20' stroke='%231c1917' stroke-width='2'/%3E%3Cpath d='M10 11l6 10 6-10z' fill='none' stroke='%231c1917' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ff6a00'/%3E%3Cpath d='M6 11h20' stroke='%231c1917' stroke-width='2'/%3E%3Cpath d='M10 11l6 10 6-10z' fill='none' stroke='%231c1917' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter+Tight:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="app-shell">
       <aside class="sidebar">
-        <a class="brand" href="#/" aria-label="Datum home"><span class="brand-mark" aria-hidden="true">▽</span><span>Datum<span class="brand-dot">.</span></span></a>
+        <a class="brand" href="#/" aria-label="Datum home"
+          ><span class="brand-mark" aria-hidden="true">▽</span
+          ><span>Datum<span class="brand-dot">.</span></span></a
+        >
         <p class="nav-label">MEASUREMENT TOOLS</p>
         <nav class="tool-nav" aria-label="Measurement tools">
-          <button type="button" class="tool-link" data-tool="rangefinder"><span>⌖</span> Distance meter</button>
+          <button type="button" class="tool-link" data-tool="rangefinder">
+            <span>⌖</span> Distance meter
+          </button>
           <button type="button" class="tool-link" data-tool="ruler"><span>↔</span> AR ruler</button>
-          <button type="button" class="tool-link" data-tool="area"><span>▣</span> Area &amp; volume</button>
-          <button type="button" class="tool-link" data-tool="counter"><span>⊹</span> Steel counter</button>
+          <button type="button" class="tool-link" data-tool="area">
+            <span>▣</span> Area &amp; volume
+          </button>
+          <button type="button" class="tool-link" data-tool="counter">
+            <span>⊹</span> Steel counter
+          </button>
           <button type="button" class="tool-link" data-tool="level"><span>◉</span> Level</button>
-          <button type="button" class="tool-link" data-tool="picture"><span>▱</span> Picture align</button>
-          <button type="button" class="tool-link" data-tool="straightedge"><span>╱</span> Straight edge</button>
-          <button type="button" class="tool-link" data-tool="angle"><span>∠</span> Angle meter</button>
+          <button type="button" class="tool-link" data-tool="picture">
+            <span>▱</span> Picture align
+          </button>
+          <button type="button" class="tool-link" data-tool="straightedge">
+            <span>╱</span> Straight edge
+          </button>
+          <button type="button" class="tool-link" data-tool="angle">
+            <span>∠</span> Angle meter
+          </button>
         </nav>
         <p class="nav-label nav-label-secondary">PLANNING &amp; ESTIMATING</p>
         <nav class="tool-nav" aria-label="Planning references">
-          <button type="button" class="tool-link" data-section="standards"><span>▦</span> Architectural standards</button>
-          <button type="button" class="tool-link" data-section="chb-calculator"><span>▧</span> CHB calculator</button>
-          <button type="button" class="tool-link" data-section="tile"><span>▦</span> Tile calculator</button>
-          <button type="button" class="tool-link" data-section="paint"><span>◧</span> Paint calculator</button>
-          <button type="button" class="tool-link" data-section="concrete"><span>◩</span> Concrete calculator</button>
+          <button type="button" class="tool-link" data-section="standards">
+            <span>▦</span> Architectural standards
+          </button>
+          <button type="button" class="tool-link" data-section="chb-calculator">
+            <span>▧</span> CHB calculator
+          </button>
+          <button type="button" class="tool-link" data-section="tile">
+            <span>▦</span> Tile calculator
+          </button>
+          <button type="button" class="tool-link" data-section="paint">
+            <span>◧</span> Paint calculator
+          </button>
+          <button type="button" class="tool-link" data-section="concrete">
+            <span>◩</span> Concrete calculator
+          </button>
         </nav>
-        <div class="sidebar-note"><span class="status-dot"></span><div><strong>Ready to measure</strong><small>Works right in your browser</small></div></div>
-        <p class="sidebar-foot">Measure, estimate, plan.<br>Runs entirely in your browser.</p>
+        <div class="sidebar-note">
+          <span class="status-dot"></span>
+          <div><strong>Ready to measure</strong><small>Works right in your browser</small></div>
+        </div>
+        <p class="sidebar-foot">Measure, estimate, plan.<br />Runs entirely in your browser.</p>
       </aside>
 
       <main class="main-content" id="main" tabindex="-1">
-        <header class="topbar"><div class="breadcrumb">TOOLS <span>/</span> <strong id="crumb">DISTANCE METER</strong></div><div class="topbar-actions"><div class="segmented segmented-sm unit-switch" role="radiogroup" aria-label="Unit system"><label><input type="radio" name="unit-system" value="metric" checked><span>Metric</span></label><label><input type="radio" name="unit-system" value="imperial"><span>Imperial</span></label></div><button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle light and dark theme">◐</button><button type="button" class="icon-button help-button" id="help-button" aria-label="Show measurement tips">?</button></div></header>
+        <header class="topbar">
+          <div class="breadcrumb">
+            TOOLS <span>/</span> <strong id="crumb">DISTANCE METER</strong>
+          </div>
+          <div class="topbar-actions">
+            <div
+              class="segmented segmented-sm unit-switch"
+              role="radiogroup"
+              aria-label="Unit system"
+            >
+              <label
+                ><input type="radio" name="unit-system" value="metric" checked /><span
+                  >Metric</span
+                ></label
+              ><label
+                ><input type="radio" name="unit-system" value="imperial" /><span
+                  >Imperial</span
+                ></label
+              >
+            </div>
+            <button
+              class="icon-button theme-toggle"
+              id="theme-toggle"
+              type="button"
+              aria-label="Switch to dark mode"
+              title="Toggle light and dark theme"
+            >
+              ◐</button
+            ><button
+              type="button"
+              class="icon-button help-button"
+              id="help-button"
+              aria-label="Show measurement tips"
+            >
+              ?
+            </button>
+          </div>
+        </header>
         <section class="page-heading">
-          <div><p class="eyebrow" id="eyebrow">CAMERA RANGEFINDER</p><h1 id="heading">Measure the world<br>around you.</h1><p class="subheading" id="description">Quick, non-contact distance and height estimates using your camera angle.</p></div>
-          <div class="camera-state"><span class="status-dot"></span><span id="camera-state">Camera not connected</span></div>
+          <div>
+            <p class="eyebrow" id="eyebrow">CAMERA RANGEFINDER</p>
+            <h1 id="heading">Measure the world<br />around you.</h1>
+            <p class="subheading" id="description">
+              Quick, non-contact distance and height estimates using your camera angle.
+            </p>
+          </div>
+          <div class="camera-state">
+            <span class="status-dot"></span><span id="camera-state">Camera not connected</span>
+          </div>
         </section>
         <section class="workbench" aria-live="polite">
           <div class="view-card">
-            <div class="view-topline"><span class="live-label"><span class="live-dot"></span><span id="view-label">LIVE VIEW</span></span><button type="button" class="camera-button" id="camera-button"><span aria-hidden="true">◉</span> Start camera</button></div>
+            <div class="view-topline">
+              <span class="live-label"
+                ><span class="live-dot"></span><span id="view-label">LIVE VIEW</span></span
+              ><button type="button" class="camera-button" id="camera-button">
+                <span aria-hidden="true">◉</span> Start camera
+              </button>
+            </div>
             <div class="camera-stage" id="camera-stage">
               <video id="camera-video" autoplay muted playsinline></video>
-              <div class="camera-placeholder" id="camera-placeholder"><span class="camera-glyph">◉</span><strong>Your viewfinder is ready</strong><span>Start the camera or use the measurement controls.</span></div>
+              <div class="camera-placeholder" id="camera-placeholder">
+                <span class="camera-glyph">◉</span><strong>Your viewfinder is ready</strong
+                ><span>Start the camera or use the measurement controls.</span>
+              </div>
               <div class="crosshair" id="crosshair" aria-hidden="true"><i></i></div>
-              <div class="camera-hud" id="camera-hud"><span id="hud-angle">0.0°</span><span class="hud-divider"></span><span id="hud-caption">TILT ANGLE</span></div>
-              <div class="stage-instruction" id="stage-instruction">Aim at the base of your target</div>
+              <div class="camera-hud" id="camera-hud">
+                <span id="hud-angle">0.0°</span><span class="hud-divider"></span
+                ><span id="hud-caption">TILT ANGLE</span>
+              </div>
+              <div class="stage-instruction" id="stage-instruction">
+                Aim at the base of your target
+              </div>
               <div class="level-overlay" id="level-overlay" aria-hidden="true"><span></span></div>
               <div class="calibration-target" id="calibration-target" aria-hidden="true">+</div>
             </div>
-            <div class="view-footer"><span><span class="tiny-dot"></span> <span id="view-tip">Keep your device steady for a better reading</span></span><span id="resolution-label">CAMERA OFF</span></div>
+            <div class="view-footer">
+              <span
+                ><span class="tiny-dot"></span>
+                <span id="view-tip">Keep your device steady for a better reading</span></span
+              ><span id="resolution-label">CAMERA OFF</span>
+            </div>
           </div>
           <aside class="control-card">
-            <div class="control-heading"><div><p class="eyebrow">YOUR MEASUREMENT</p><h2 id="control-title">Distance &amp; height</h2></div><span class="tool-icon" id="tool-icon">⌖</span></div>
+            <div class="control-heading">
+              <div>
+                <p class="eyebrow">YOUR MEASUREMENT</p>
+                <h2 id="control-title">Distance &amp; height</h2>
+              </div>
+              <span class="tool-icon" id="tool-icon">⌖</span>
+            </div>
             <div id="controls"></div>
-            <div class="result-card" id="result-card"><div class="result-label"><span class="result-indicator"></span><span id="result-title">ESTIMATED DISTANCE</span></div><div class="result-value"><strong id="result-value">—</strong><span id="result-unit">m</span></div><p id="result-detail">Enter lens height and angle to calculate.</p></div>
-            <button type="button" class="primary-button" id="primary-button">Calculate distance <span aria-hidden="true">↗</span></button>
-            <p class="disclaimer" id="disclaimer">Estimates are approximate and depend on your device sensors and measurements.</p>
+            <div class="result-card" id="result-card">
+              <div class="result-label">
+                <span class="result-indicator"></span
+                ><span id="result-title">ESTIMATED DISTANCE</span>
+              </div>
+              <div class="result-value">
+                <strong id="result-value">—</strong><span id="result-unit">m</span>
+              </div>
+              <p id="result-detail">Enter lens height and angle to calculate.</p>
+            </div>
+            <button type="button" class="primary-button" id="primary-button">
+              Calculate distance <span aria-hidden="true">↗</span>
+            </button>
+            <p class="disclaimer" id="disclaimer">
+              Estimates are approximate and depend on your device sensors and measurements.
+            </p>
+            <section class="howto" id="howto" aria-labelledby="howto-title">
+              <div class="howto-head">
+                <p class="eyebrow">HOW TO USE</p>
+                <h3 id="howto-title">Step by step</h3>
+                <button
+                  type="button"
+                  class="howto-play"
+                  id="howto-play"
+                  aria-label="Pause step walkthrough"
+                >
+                  ❚❚
+                </button>
+              </div>
+              <ol class="howto-steps" id="howto-steps"></ol>
+            </section>
           </aside>
         </section>
 
-        <section class="standards-view" id="standards-view" aria-labelledby="standards-title" hidden>
-          <div class="standards-heading"><div><p class="eyebrow">ARCHITECTURAL STANDARDS</p><h1 id="standards-title">Design with the right dimensions.</h1><p class="subheading">Use these early-planning ranges to check scale and circulation before drafting a floor plan.</p></div><span class="standards-unit">METRIC · mm / m</span></div>
-          <div class="standards-notice" role="note"><span class="notice-mark" aria-hidden="true">!</span><p><strong>Planning guidance, not building-code approval.</strong> Required dimensions vary by location, building type, occupancy, accessibility rules, and construction system. Confirm the current local code and have structural and permit drawings reviewed by qualified professionals.</p></div>
-          <section class="standard-search" aria-labelledby="standard-search-title"><div class="search-heading"><div><p class="eyebrow">FIND A PLANNING REFERENCE</p><h2 id="standard-search-title">What are you planning?</h2></div><p class="search-description">Search rooms, ceilings, windows, doors, stairs, ramps, parking, or other Philippine code topics.</p></div>
-            <form class="standard-search-form" id="standard-search-form" role="search"><label class="visually-hidden" for="standard-search-input">Search architectural standards</label><input id="standard-search-input" type="search" placeholder="Try “standard door size for an open office”" autocomplete="off"><button class="primary-button" type="submit">Search <span aria-hidden="true">⌕</span></button></form>
-            <div class="search-examples" aria-label="Search examples"><span>TRY:</span><button class="search-example" type="button" data-query="standard door size for an open office">Open-office door</button><button class="search-example" type="button" data-query="office corridor egress width Philippines">Office egress</button><button class="search-example" type="button" data-query="bedroom room size windows ventilation">Room size</button><button class="search-example" type="button" data-query="accessible ramp slope">Ramp slope</button><button class="search-example" type="button" data-query="ceiling height">Ceiling height</button><button class="search-example" type="button" data-query="bedroom door size">Bedroom door</button></div>
-            <div class="standard-search-results" id="standard-search-results" aria-live="polite" aria-atomic="true"><p class="search-prompt">Enter a topic to see a suggested starting point, code context, and a step-by-step planning checklist. Search uses this built-in reference guide and does not send your query to a service.</p></div>
-          </section>
-          <section class="drawing-lab" id="drawing-lab" aria-labelledby="drawing-lab-title">
-            <div class="drawing-lab-head"><div><p class="eyebrow">LIVE DESIGN DRAWINGS</p><h2 id="drawing-lab-title">Design it, see it dimensioned, check it against code.</h2><p class="search-description">Drag the sliders to design stairs, ramps, rooms, doors, windows, kitchens, bathrooms, wiring, sections, drains or parking. The drawing, its dimensions and the code checks update as you go.</p></div>
-              <div class="drawing-actions"><button type="button" class="ghost-button" data-drawing-reset>↺ Reset</button><button type="button" class="ghost-button" data-drawing-download>⤓ Download SVG</button></div></div>
-            <div class="drawing-tabs" role="tablist" aria-label="Drawing type" data-drawing-tabs></div>
-            <div class="drawing-body">
-              <figure class="drawing-canvas"><div data-drawing-canvas></div><figcaption data-drawing-summary></figcaption></figure>
-              <div class="drawing-side"><div class="drawing-controls" data-drawing-controls></div><ul class="drawing-checks" data-drawing-checks aria-live="polite"></ul></div>
+        <section
+          class="standards-view"
+          id="standards-view"
+          aria-labelledby="standards-title"
+          hidden
+        >
+          <div class="standards-heading">
+            <div>
+              <p class="eyebrow">ARCHITECTURAL STANDARDS</p>
+              <h1 id="standards-title">Design with the right dimensions.</h1>
+              <p class="subheading">
+                Use these early-planning ranges to check scale and circulation before drafting a
+                floor plan.
+              </p>
+            </div>
+            <span class="standards-unit">METRIC · mm / m</span>
+          </div>
+          <div class="standards-notice" role="note">
+            <span class="notice-mark" aria-hidden="true">!</span>
+            <p>
+              <strong>Planning guidance, not building-code approval.</strong> Required dimensions
+              vary by location, building type, occupancy, accessibility rules, and construction
+              system. Confirm the current local code and have structural and permit drawings
+              reviewed by qualified professionals.
+            </p>
+          </div>
+          <section class="standard-search" aria-labelledby="standard-search-title">
+            <div class="search-heading">
+              <div>
+                <p class="eyebrow">FIND A PLANNING REFERENCE</p>
+                <h2 id="standard-search-title">What are you planning?</h2>
+              </div>
+              <p class="search-description">
+                Search rooms, ceilings, windows, doors, stairs, ramps, parking, or other Philippine
+                code topics.
+              </p>
+            </div>
+            <form class="standard-search-form" id="standard-search-form" role="search">
+              <label class="visually-hidden" for="standard-search-input"
+                >Search architectural standards</label
+              ><input
+                id="standard-search-input"
+                type="search"
+                placeholder="Try “standard door size for an open office”"
+                autocomplete="off"
+              /><button class="primary-button" type="submit">
+                Search <span aria-hidden="true">⌕</span>
+              </button>
+            </form>
+            <div class="search-examples" aria-label="Search examples">
+              <span>TRY:</span
+              ><button
+                class="search-example"
+                type="button"
+                data-query="standard door size for an open office"
+              >
+                Open-office door</button
+              ><button
+                class="search-example"
+                type="button"
+                data-query="office corridor egress width Philippines"
+              >
+                Office egress</button
+              ><button
+                class="search-example"
+                type="button"
+                data-query="bedroom room size windows ventilation"
+              >
+                Room size</button
+              ><button class="search-example" type="button" data-query="accessible ramp slope">
+                Ramp slope</button
+              ><button class="search-example" type="button" data-query="ceiling height">
+                Ceiling height</button
+              ><button class="search-example" type="button" data-query="bedroom door size">
+                Bedroom door
+              </button>
+            </div>
+            <div
+              class="standard-search-results"
+              id="standard-search-results"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              <p class="search-prompt">
+                Enter a topic to see a suggested starting point, code context, and a step-by-step
+                planning checklist. Search uses this built-in reference guide and does not send your
+                query to a service.
+              </p>
             </div>
           </section>
-          <section class="room-schedule standard-card" id="room-schedule" aria-labelledby="room-schedule-title"><div class="drawing-lab-head"><div><p class="eyebrow">STANDARDS SCHEDULE</p><h2 id="room-schedule-title">Every standard, room by room and element by element.</h2><p class="search-description">Doors, windows and room sizes for each room, plus stairs, kitchens, bathrooms, electrical, plumbing, ceilings, clearances and parking. Filter, switch units, or use <b>Draw ↗</b> to open an item in the live drawing.</p></div></div><div data-room-schedule></div></section>
+          <section class="drawing-lab" id="drawing-lab" aria-labelledby="drawing-lab-title">
+            <div class="drawing-lab-head">
+              <div>
+                <p class="eyebrow">LIVE DESIGN DRAWINGS</p>
+                <h2 id="drawing-lab-title">
+                  Design it, see it dimensioned, check it against code.
+                </h2>
+                <p class="search-description">
+                  Drag the sliders to design stairs, ramps, rooms, doors, windows, kitchens,
+                  bathrooms, wiring, sections, drains or parking. The drawing, its dimensions and
+                  the code checks update as you go.
+                </p>
+              </div>
+              <div class="drawing-actions">
+                <button type="button" class="ghost-button" data-drawing-reset>↺ Reset</button
+                ><button type="button" class="ghost-button" data-drawing-download>
+                  ⤓ Download SVG
+                </button>
+              </div>
+            </div>
+            <div
+              class="drawing-tabs"
+              role="tablist"
+              aria-label="Drawing type"
+              data-drawing-tabs
+            ></div>
+            <div class="drawing-body">
+              <figure class="drawing-canvas">
+                <div data-drawing-canvas></div>
+                <figcaption data-drawing-summary></figcaption>
+              </figure>
+              <div class="drawing-side">
+                <div class="drawing-controls" data-drawing-controls></div>
+                <ul class="drawing-checks" data-drawing-checks aria-live="polite"></ul>
+              </div>
+            </div>
+          </section>
+          <section
+            class="room-schedule standard-card"
+            id="room-schedule"
+            aria-labelledby="room-schedule-title"
+          >
+            <div class="drawing-lab-head">
+              <div>
+                <p class="eyebrow">STANDARDS SCHEDULE</p>
+                <h2 id="room-schedule-title">
+                  Every standard, room by room and element by element.
+                </h2>
+                <p class="search-description">
+                  Doors, windows and room sizes for each room, plus stairs, kitchens, bathrooms,
+                  electrical, plumbing, ceilings, clearances and parking. Filter, switch units, or
+                  use <b>Draw ↗</b> to open an item in the live drawing.
+                </p>
+              </div>
+            </div>
+            <div data-room-schedule></div>
+          </section>
           <div class="standards-grid">
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">▤</span><div><p class="eyebrow">WALLS</p><h2>Wall thickness</h2></div></div><dl class="dimension-list"><div><dt>Interior non-load-bearing partition</dt><dd>100–125 mm</dd></div><div><dt>Interior masonry partition</dt><dd>100–150 mm</dd></div><div><dt>Exterior wall assembly</dt><dd>200–300 mm</dd></div><div><dt>Structural wall / column</dt><dd>Engineer-designed</dd></div></dl><p class="standard-note">Include finishes in the overall plan thickness. Never size a structural wall from this reference alone.</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">↔</span><div><p class="eyebrow">DOORS</p><h2>Door openings</h2></div></div><dl class="dimension-list"><div><dt>Interior room door</dt><dd>800–900 mm</dd></div><div><dt>Main entry door</dt><dd>900–1,000 mm</dd></div><div><dt>Bathroom door</dt><dd>750–850 mm</dd></div><div><dt>Accessible route / door</dt><dd>Check local code</dd></div></dl><p class="standard-note">Confirm clear opening, swing, hardware, and accessible route requirements for the project.</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">↕</span><div><p class="eyebrow">CIRCULATION</p><h2>Corridors &amp; clearances</h2></div></div><dl class="dimension-list"><div><dt>Single-person passage</dt><dd>900 mm min.</dd></div><div><dt>Comfortable residential hall</dt><dd>1,000–1,200 mm</dd></div><div><dt>Two-way circulation</dt><dd>1,200 mm+</dd></div><div><dt>Egress / accessible route</dt><dd>Check local code</dd></div></dl><p class="standard-note">Check turning areas, door swings, and required egress width at the narrowest point.</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">▱</span><div><p class="eyebrow">ROOMS</p><h2>Residential planning</h2></div></div><dl class="dimension-list"><div><dt>Single bedroom (planning range)</dt><dd>2.7 × 3.0 m+</dd></div><div><dt>Double bedroom (planning range)</dt><dd>3.0 × 3.3 m+</dd></div><div><dt>Kitchen work aisle</dt><dd>1,000–1,200 mm</dd></div><div><dt>Window / ventilation</dt><dd>Check local code</dd></div></dl><p class="standard-note">Room size depends on furniture, occupancy, ventilation, daylight, and applicable local rules.</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">∠</span><div><p class="eyebrow">STAIRS</p><h2>Stair proportions</h2></div></div><dl class="dimension-list"><div><dt>Residential riser (planning range)</dt><dd>150–180 mm</dd></div><div><dt>Going / tread (planning range)</dt><dd>250–300 mm</dd></div><div><dt>Comfort check</dt><dd>2R + G ≈ 600–650 mm</dd></div><div><dt>Headroom / handrails</dt><dd>Check local code</dd></div></dl><p class="standard-note">Verify uniformity, landings, handrails, guards, and headroom against the adopted code.</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">▦</span><div><p class="eyebrow">DRAWING</p><h2>Plan coordination</h2></div></div><dl class="dimension-list"><div><dt>Show clear room dimensions</dt><dd>Finish to finish</dd></div><div><dt>Identify wall assemblies</dt><dd>Type and thickness</dd></div><div><dt>Coordinate openings</dt><dd>Schedule + plan</dd></div><div><dt>Verify structure and services</dt><dd>Before issue</dd></div></dl><p class="standard-note">Dimension the usable clear space and coordinate architecture, structure, and building services.</p></article>
+            <article class="standard-card">
+              <div class="standard-card-heading">
+                <span class="standard-icon" aria-hidden="true">▤</span>
+                <div>
+                  <p class="eyebrow">WALLS</p>
+                  <h2>Wall thickness</h2>
+                </div>
+              </div>
+              <dl class="dimension-list">
+                <div>
+                  <dt>Interior non-load-bearing partition</dt>
+                  <dd>100–125 mm</dd>
+                </div>
+                <div>
+                  <dt>Interior masonry partition</dt>
+                  <dd>100–150 mm</dd>
+                </div>
+                <div>
+                  <dt>Exterior wall assembly</dt>
+                  <dd>200–300 mm</dd>
+                </div>
+                <div>
+                  <dt>Structural wall / column</dt>
+                  <dd>Engineer-designed</dd>
+                </div>
+              </dl>
+              <p class="standard-note">
+                Include finishes in the overall plan thickness. Never size a structural wall from
+                this reference alone.
+              </p>
+            </article>
+            <article class="standard-card">
+              <div class="standard-card-heading">
+                <span class="standard-icon" aria-hidden="true">↔</span>
+                <div>
+                  <p class="eyebrow">DOORS</p>
+                  <h2>Door openings</h2>
+                </div>
+              </div>
+              <dl class="dimension-list">
+                <div>
+                  <dt>Interior room door</dt>
+                  <dd>800–900 mm</dd>
+                </div>
+                <div>
+                  <dt>Main entry door</dt>
+                  <dd>900–1,000 mm</dd>
+                </div>
+                <div>
+                  <dt>Bathroom door</dt>
+                  <dd>750–850 mm</dd>
+                </div>
+                <div>
+                  <dt>Accessible route / door</dt>
+                  <dd>Check local code</dd>
+                </div>
+              </dl>
+              <p class="standard-note">
+                Confirm clear opening, swing, hardware, and accessible route requirements for the
+                project.
+              </p>
+            </article>
+            <article class="standard-card">
+              <div class="standard-card-heading">
+                <span class="standard-icon" aria-hidden="true">↕</span>
+                <div>
+                  <p class="eyebrow">CIRCULATION</p>
+                  <h2>Corridors &amp; clearances</h2>
+                </div>
+              </div>
+              <dl class="dimension-list">
+                <div>
+                  <dt>Single-person passage</dt>
+                  <dd>900 mm min.</dd>
+                </div>
+                <div>
+                  <dt>Comfortable residential hall</dt>
+                  <dd>1,000–1,200 mm</dd>
+                </div>
+                <div>
+                  <dt>Two-way circulation</dt>
+                  <dd>1,200 mm+</dd>
+                </div>
+                <div>
+                  <dt>Egress / accessible route</dt>
+                  <dd>Check local code</dd>
+                </div>
+              </dl>
+              <p class="standard-note">
+                Check turning areas, door swings, and required egress width at the narrowest point.
+              </p>
+            </article>
+            <article class="standard-card">
+              <div class="standard-card-heading">
+                <span class="standard-icon" aria-hidden="true">▱</span>
+                <div>
+                  <p class="eyebrow">ROOMS</p>
+                  <h2>Residential planning</h2>
+                </div>
+              </div>
+              <dl class="dimension-list">
+                <div>
+                  <dt>Single bedroom (planning range)</dt>
+                  <dd>2.7 × 3.0 m+</dd>
+                </div>
+                <div>
+                  <dt>Double bedroom (planning range)</dt>
+                  <dd>3.0 × 3.3 m+</dd>
+                </div>
+                <div>
+                  <dt>Kitchen work aisle</dt>
+                  <dd>1,000–1,200 mm</dd>
+                </div>
+                <div>
+                  <dt>Window / ventilation</dt>
+                  <dd>Check local code</dd>
+                </div>
+              </dl>
+              <p class="standard-note">
+                Room size depends on furniture, occupancy, ventilation, daylight, and applicable
+                local rules.
+              </p>
+            </article>
+            <article class="standard-card">
+              <div class="standard-card-heading">
+                <span class="standard-icon" aria-hidden="true">∠</span>
+                <div>
+                  <p class="eyebrow">STAIRS</p>
+                  <h2>Stair proportions</h2>
+                </div>
+              </div>
+              <dl class="dimension-list">
+                <div>
+                  <dt>Residential riser (planning range)</dt>
+                  <dd>150–180 mm</dd>
+                </div>
+                <div>
+                  <dt>Going / tread (planning range)</dt>
+                  <dd>250–300 mm</dd>
+                </div>
+                <div>
+                  <dt>Comfort check</dt>
+                  <dd>2R + G ≈ 600–650 mm</dd>
+                </div>
+                <div>
+                  <dt>Headroom / handrails</dt>
+                  <dd>Check local code</dd>
+                </div>
+              </dl>
+              <p class="standard-note">
+                Verify uniformity, landings, handrails, guards, and headroom against the adopted
+                code.
+              </p>
+            </article>
+            <article class="standard-card">
+              <div class="standard-card-heading">
+                <span class="standard-icon" aria-hidden="true">▦</span>
+                <div>
+                  <p class="eyebrow">DRAWING</p>
+                  <h2>Plan coordination</h2>
+                </div>
+              </div>
+              <dl class="dimension-list">
+                <div>
+                  <dt>Show clear room dimensions</dt>
+                  <dd>Finish to finish</dd>
+                </div>
+                <div>
+                  <dt>Identify wall assemblies</dt>
+                  <dd>Type and thickness</dd>
+                </div>
+                <div>
+                  <dt>Coordinate openings</dt>
+                  <dd>Schedule + plan</dd>
+                </div>
+                <div>
+                  <dt>Verify structure and services</dt>
+                  <dd>Before issue</dd>
+                </div>
+              </dl>
+              <p class="standard-note">
+                Dimension the usable clear space and coordinate architecture, structure, and
+                building services.
+              </p>
+            </article>
           </div>
-          <section class="code-minimums" aria-labelledby="code-minimums-title"><div class="standards-subhead"><p class="eyebrow">PHILIPPINES · CODE MINIMUMS</p><h2 id="code-minimums-title">Architectural standards at a glance.</h2><p>Key numeric minimums from the National Building Code (PD 1096) and its IRR, plus the Accessibility Law (BP 344). Always check the current edition, local amendments, and fire code (RA 9514) before you issue drawings.</p></div>
-          <div class="standards-grid">
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">▱</span><div><p class="eyebrow">ROOM SIZES</p><h2>Minimum room areas</h2></div></div><dl class="dimension-list"><div><dt>Habitable room</dt><dd>6.00 m² · least dim. 2.00 m</dd></div><div><dt>Kitchen</dt><dd>3.00 m² · least dim. 1.50 m</dd></div><div><dt>Toilet and bath</dt><dd>1.20 m² · least dim. 0.90 m</dd></div></dl><p class="standard-note">Areas are clear floor areas. Furniture layouts usually need more than the code minimum.</p><p class="standard-cite">PD 1096 IRR · Rule VIII §806</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">↕</span><div><p class="eyebrow">CEILINGS</p><h2>Ceiling heights</h2></div></div><dl class="dimension-list"><div><dt>Habitable room, artificial ventilation</dt><dd>2.40 m min.</dd></div><div><dt>Natural ventilation, 1st storey</dt><dd>2.70 m min.</dd></div><div><dt>Natural ventilation, 2nd storey</dt><dd>2.40 m min.</dd></div><div><dt>Natural ventilation, 3rd storey up</dt><dd>2.10 m min.</dd></div><div><dt>Mezzanine floor</dt><dd>1.80 m min.</dd></div></dl><p class="standard-note">Measured from finished floor to ceiling. Check soffits, beams, and ductwork against the clear height.</p><p class="standard-cite">PD 1096 IRR · Rule VIII §805</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">◫</span><div><p class="eyebrow">LIGHT & AIR</p><h2>Windows and ventilation</h2></div></div><dl class="dimension-list"><div><dt>Window opening (rooms)</dt><dd>≥ 10% of floor area</dd></div><div><dt>Minimum window area</dt><dd>1.00 m²</dd></div><div><dt>Toilet / bath opening</dt><dd>≥ 1/20 of floor area, 0.24 m² min.</dd></div></dl><p class="standard-note">Openings must face a court, yard, or public street. Mechanical ventilation can substitute where the IRR allows it.</p><p class="standard-cite">PD 1096 IRR · Rule VIII §808</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">⇥</span><div><p class="eyebrow">EGRESS</p><h2>Exits, doors and corridors</h2></div></div><dl class="dimension-list"><div><dt>Exit door width</dt><dd>0.90 m min.</dd></div><div><dt>Exit door height</dt><dd>2.00 m min.</dd></div><div><dt>Corridor width</dt><dd>1.12 m min.</dd></div><div><dt>Corridor, occupant load under 50</dt><dd>0.90 m min.</dd></div><div><dt>Exit doors</dt><dd>Swing in direction of travel</dd></div></dl><p class="standard-note">Exit counts and widths are driven by occupant load. Run that calculation before you fix any widths.</p><p class="standard-cite">PD 1096 · Rule XII §1207</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">∠</span><div><p class="eyebrow">STAIRS</p><h2>Stair geometry</h2></div></div><dl class="dimension-list"><div><dt>Riser height</dt><dd>200 mm max.</dd></div><div><dt>Tread / run</dt><dd>250 mm min.</dd></div><div><dt>Width, occupant load over 50</dt><dd>1.10 m min.</dd></div><div><dt>Width, occupant load 50 or less</dt><dd>0.90 m min.</dd></div><div><dt>Private stair, under 10 occupants</dt><dd>0.75 m min.</dd></div><div><dt>Headroom</dt><dd>2.00 m min.</dd></div></dl><p class="standard-note">Keep risers and treads uniform within a flight. Add handrails on both sides of wider stairs.</p><p class="standard-cite">PD 1096 · Rule XII §1207</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">♿</span><div><p class="eyebrow">ACCESSIBILITY</p><h2>Accessible design</h2></div></div><dl class="dimension-list"><div><dt>Ramp gradient</dt><dd>1:12 max.</dd></div><div><dt>Ramp width</dt><dd>1.20 m min.</dd></div><div><dt>Ramp length between landings</dt><dd>6.00 m max.</dd></div><div><dt>Landing / turning space</dt><dd>1.50 × 1.50 m</dd></div><div><dt>Handrails (dual height)</dt><dd>0.70 m and 0.90 m</dd></div><div><dt>Door clear opening</dt><dd>0.80 m min.</dd></div><div><dt>Accessible toilet cubicle</dt><dd>1.70 × 1.80 m min.</dd></div></dl><p class="standard-note">Applies to the building types listed in BP 344. Coordinate the full accessible route, not just individual elements.</p><p class="standard-cite">BP 344 · IRR Annex A</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">▭</span><div><p class="eyebrow">PARKING</p><h2>Parking stalls</h2></div></div><dl class="dimension-list"><div><dt>Standard car stall</dt><dd>2.50 × 5.00 m</dd></div><div><dt>Accessible stall</dt><dd>3.70 × 5.00 m</dd></div><div><dt>Two-way driveway</dt><dd>6.00 m typical</dd></div></dl><p class="standard-note">Stall counts depend on occupancy and local ordinance. Also check the turning radius and ramp slope for basements.</p><p class="standard-cite">PD 1096 IRR · Rule VII · BP 344</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">⌂</span><div><p class="eyebrow">SITE</p><h2>Setbacks and open space</h2></div></div><dl class="dimension-list"><div><dt>Lot coverage / open space</dt><dd>By use and lot type</dd></div><div><dt>Front, side and rear setbacks</dt><dd>By road width and zoning</dd></div><div><dt>Firewall on property line</dt><dd>Per Rule VII</dd></div></dl><p class="standard-note">These values vary by zoning class and lot type. Use the IRR tables and the local zoning ordinance for the actual numbers.</p><p class="standard-cite">PD 1096 IRR · Rule VII</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">⌂</span><div><p class="eyebrow">KITCHEN</p><h2>Kitchen layout</h2></div></div><dl class="dimension-list"><div><dt>Counter height</dt><dd>850–900 mm</dd></div><div><dt>Counter depth</dt><dd>600 mm</dd></div><div><dt>Upper cabinet above counter</dt><dd>450–600 mm</dd></div><div><dt>Work aisle, one cook</dt><dd>1,000–1,200 mm</dd></div><div><dt>Work triangle, total of 3 legs</dt><dd>4.0–7.9 m</dd></div></dl><p class="standard-note">Keep the sink, cooktop and fridge triangle free of through-traffic.</p><p class="standard-cite">Planning practice</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">◌</span><div><p class="eyebrow">BATHROOM</p><h2>Fixture clearances</h2></div></div><dl class="dimension-list"><div><dt>WC centreline to side wall</dt><dd>380–450 mm</dd></div><div><dt>Clear space in front of WC</dt><dd>≥ 600 mm</dd></div><div><dt>Lavatory rim height</dt><dd>800–850 mm</dd></div><div><dt>Shower, minimum</dt><dd>900 × 900 mm</dd></div><div><dt>Accessible WC seat height</dt><dd>450 mm</dd></div></dl><p class="standard-note">Plan the fixture rough-ins together with the plumbing stacks and floor drains.</p><p class="standard-cite">Planning practice · BP 344</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">▥</span><div><p class="eyebrow">OPENINGS</p><h2>Windows and sills</h2></div></div><dl class="dimension-list"><div><dt>Typical sill height</dt><dd>900 mm</dd></div><div><dt>Window head height</dt><dd>2,100 mm</dd></div><div><dt>Standard door height</dt><dd>2,100 mm</dd></div><div><dt>Glazing near floor or doors</dt><dd>Safety glass</dd></div></dl><p class="standard-note">Line up window and door heads for a cleaner elevation. Check fire separation on walls near property lines.</p><p class="standard-cite">Planning practice</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">⊓</span><div><p class="eyebrow">SAFETY</p><h2>Railings and guards</h2></div></div><dl class="dimension-list"><div><dt>Stair handrail height</dt><dd>800–900 mm</dd></div><div><dt>Balcony / landing guard</dt><dd>≈ 1,000 mm (verify)</dd></div><div><dt>Guard baluster opening</dt><dd>< 100 mm</dd></div><div><dt>Handrail grip size</dt><dd>32–50 mm</dd></div></dl><p class="standard-note">Required wherever there is a drop. Avoid horizontal rails that children can climb.</p><p class="standard-cite">NBC §1207 · planning practice</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">▦</span><div><p class="eyebrow">STRUCTURE</p><h2>Preliminary member sizes</h2></div></div><dl class="dimension-list"><div><dt>Residential slab thickness</dt><dd>100–125 mm</dd></div><div><dt>Beam depth (simple span)</dt><dd>≈ span ÷ 12</dd></div><div><dt>Typical small column</dt><dd>≥ 250 × 250 mm</dd></div><div><dt>CHB wall reinforcement</dt><dd>Ø10 @ 600–800 mm</dd></div></dl><p class="standard-note">Rules of thumb for early sketches only. A licensed engineer must design to NSCP 2015.</p><p class="standard-cite">NSCP 2015 · rule of thumb</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">⚡</span><div><p class="eyebrow">SERVICES</p><h2>Electrical heights</h2></div></div><dl class="dimension-list"><div><dt>Convenience outlet above floor</dt><dd>300 mm</dd></div><div><dt>Light switch</dt><dd>1,200–1,400 mm</dd></div><div><dt>Accessible switches and controls</dt><dd>≤ 1,200 mm</dd></div><div><dt>Kitchen counter outlets</dt><dd>1,100 mm</dd></div></dl><p class="standard-note">Keep outlets away from wet areas or use GFCI. Coordinate the panel board location early.</p><p class="standard-cite">PEC 2017 · BP 344</p></article>
-            <article class="standard-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">⇆</span><div><p class="eyebrow">FIRE SAFETY</p><h2>Exits and fire safety</h2></div></div><dl class="dimension-list"><div><dt>Exits from most floors</dt><dd>2 minimum</dd></div><div><dt>Exit doors</dt><dd>Swing outward, with travel</dd></div><div><dt>Exit signs and emergency lights</dt><dd>Required</dd></div><div><dt>Travel distance, dead ends</dt><dd>By occupancy table</dd></div></dl><p class="standard-note">Travel distance and occupant-load limits depend on the occupancy. Use the RA 9514 IRR tables and get BFP review.</p><p class="standard-cite">RA 9514 · Fire Code IRR</p></article>
-          </div></section>
-          <section class="code-reference-section"><div class="code-section-heading"><div><p class="eyebrow">PHILIPPINES · CODE CONTEXT</p><h2>Items to verify before you draw.</h2></div><span class="code-scope-tag">REFERENCE ONLY</span></div><p class="code-section-intro">Use current, locally adopted regulations and project-specific requirements for final dimensions. These references are a starting point for coordination, not a substitute for code review or professional design.</p>
-            <div class="standards-grid"><article class="standard-card code-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">§</span><div><p class="eyebrow">BUILDING RULES</p><h2>National Building Code</h2></div></div><ul class="code-check-list"><li>Confirm occupancy classification and allowable room use.</li><li>Check light, ventilation, exit access, and required clear widths.</li><li>Verify the current local adoption and amendments.</li></ul><a class="code-source" href="https://www.dpwh.gov.ph/DPWH/references/laws_codes_orders" target="_blank" rel="noopener noreferrer">DPWH laws and codes ↗</a></article>
-              <article class="standard-card code-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">♿</span><div><p class="eyebrow">ACCESSIBILITY</p><h2>BP 344 and IRR</h2></div></div><ul class="code-check-list"><li>Review accessible routes, door clearances, ramps, and turning space.</li><li>Coordinate accessible facilities and signage where required.</li><li>Use the current implementing rules for the project.</li></ul><a class="code-source" href="https://www.ncda.gov.ph/disability-laws/batas-pambansa/batas-pambansa-blg-344/" target="_blank" rel="noopener noreferrer">NCDA · BP 344 ↗</a></article><article class="standard-card code-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">🔥</span><div><p class="eyebrow">FIRE CODE</p><h2>RA 9514 · Fire Code of the Philippines</h2></div></div><ul class="code-check-list"><li>Classify the occupancy and compute occupant load.</li><li>Check exits, travel distance, fire separations and protection systems.</li><li>Secure the Fire Safety Evaluation Clearance before the building permit.</li></ul><a class="code-source" href="https://bfp.gov.ph" target="_blank" rel="noopener noreferrer">Bureau of Fire Protection ↗</a></article><article class="standard-card code-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">▦</span><div><p class="eyebrow">STRUCTURAL</p><h2>NSCP 2015 · Structural Code</h2></div></div><ul class="code-check-list"><li>Design loads, seismic and wind per Volume 1.</li><li>Concrete, steel and masonry member design.</li><li>Structural plans must be signed by a licensed civil engineer.</li></ul><span class="code-source is-muted">ASEP publication</span></article><article class="standard-card code-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">⚡</span><div><p class="eyebrow">ELECTRICAL</p><h2>PEC 2017 · Electrical Code</h2></div></div><ul class="code-check-list"><li>Branch circuits, outlet spacing and wet-area protection.</li><li>Panel board location and clearances.</li><li>Plans signed by a Professional Electrical Engineer.</li></ul><span class="code-source is-muted">IIEE publication</span></article><article class="standard-card code-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">◌</span><div><p class="eyebrow">PLUMBING</p><h2>National Plumbing Code</h2></div></div><ul class="code-check-list"><li>Fixture counts by occupancy.</li><li>Drainage, venting and septic tank requirements.</li><li>Water supply sizing and fixture rough-ins.</li></ul><span class="code-source is-muted">RA 1378 · Revised NPC</span></article><article class="standard-card code-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">♻</span><div><p class="eyebrow">SUSTAINABILITY</p><h2>Philippine Green Building Code</h2></div></div><ul class="code-check-list"><li>Energy efficiency, water efficiency and materials.</li><li>Applies to buildings above the size thresholds in the code.</li><li>Referral code of PD 1096.</li></ul><a class="code-source" href="https://www.dpwh.gov.ph/DPWH/references/laws_codes_orders" target="_blank" rel="noopener noreferrer">DPWH references ↗</a></article><article class="standard-card code-card"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">⌖</span><div><p class="eyebrow">ZONING</p><h2>Local zoning ordinance</h2></div></div><ul class="code-check-list"><li>Allowed use, height limits and floor-area ratio.</li><li>Setbacks and parking requirements beyond the NBC.</li><li>Locational clearance comes before the building permit.</li></ul><span class="code-source is-muted">City / municipal planning office</span></article></div>
+          <section class="code-minimums" aria-labelledby="code-minimums-title">
+            <div class="standards-subhead">
+              <p class="eyebrow">PHILIPPINES · CODE MINIMUMS</p>
+              <h2 id="code-minimums-title">Architectural standards at a glance.</h2>
+              <p>
+                Key numeric minimums from the National Building Code (PD 1096) and its IRR, plus the
+                Accessibility Law (BP 344). Always check the current edition, local amendments, and
+                fire code (RA 9514) before you issue drawings.
+              </p>
+            </div>
+            <div class="standards-grid">
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">▱</span>
+                  <div>
+                    <p class="eyebrow">ROOM SIZES</p>
+                    <h2>Minimum room areas</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Habitable room</dt>
+                    <dd>6.00 m² · least dim. 2.00 m</dd>
+                  </div>
+                  <div>
+                    <dt>Kitchen</dt>
+                    <dd>3.00 m² · least dim. 1.50 m</dd>
+                  </div>
+                  <div>
+                    <dt>Toilet and bath</dt>
+                    <dd>1.20 m² · least dim. 0.90 m</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Areas are clear floor areas. Furniture layouts usually need more than the code
+                  minimum.
+                </p>
+                <p class="standard-cite">PD 1096 IRR · Rule VIII §806</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">↕</span>
+                  <div>
+                    <p class="eyebrow">CEILINGS</p>
+                    <h2>Ceiling heights</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Habitable room, artificial ventilation</dt>
+                    <dd>2.40 m min.</dd>
+                  </div>
+                  <div>
+                    <dt>Natural ventilation, 1st storey</dt>
+                    <dd>2.70 m min.</dd>
+                  </div>
+                  <div>
+                    <dt>Natural ventilation, 2nd storey</dt>
+                    <dd>2.40 m min.</dd>
+                  </div>
+                  <div>
+                    <dt>Natural ventilation, 3rd storey up</dt>
+                    <dd>2.10 m min.</dd>
+                  </div>
+                  <div>
+                    <dt>Mezzanine floor</dt>
+                    <dd>1.80 m min.</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Measured from finished floor to ceiling. Check soffits, beams, and ductwork
+                  against the clear height.
+                </p>
+                <p class="standard-cite">PD 1096 IRR · Rule VIII §805</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">◫</span>
+                  <div>
+                    <p class="eyebrow">LIGHT & AIR</p>
+                    <h2>Windows and ventilation</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Window opening (rooms)</dt>
+                    <dd>≥ 10% of floor area</dd>
+                  </div>
+                  <div>
+                    <dt>Minimum window area</dt>
+                    <dd>1.00 m²</dd>
+                  </div>
+                  <div>
+                    <dt>Toilet / bath opening</dt>
+                    <dd>≥ 1/20 of floor area, 0.24 m² min.</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Openings must face a court, yard, or public street. Mechanical ventilation can
+                  substitute where the IRR allows it.
+                </p>
+                <p class="standard-cite">PD 1096 IRR · Rule VIII §808</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">⇥</span>
+                  <div>
+                    <p class="eyebrow">EGRESS</p>
+                    <h2>Exits, doors and corridors</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Exit door width</dt>
+                    <dd>0.90 m min.</dd>
+                  </div>
+                  <div>
+                    <dt>Exit door height</dt>
+                    <dd>2.00 m min.</dd>
+                  </div>
+                  <div>
+                    <dt>Corridor width</dt>
+                    <dd>1.12 m min.</dd>
+                  </div>
+                  <div>
+                    <dt>Corridor, occupant load under 50</dt>
+                    <dd>0.90 m min.</dd>
+                  </div>
+                  <div>
+                    <dt>Exit doors</dt>
+                    <dd>Swing in direction of travel</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Exit counts and widths are driven by occupant load. Run that calculation before
+                  you fix any widths.
+                </p>
+                <p class="standard-cite">PD 1096 · Rule XII §1207</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">∠</span>
+                  <div>
+                    <p class="eyebrow">STAIRS</p>
+                    <h2>Stair geometry</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Riser height</dt>
+                    <dd>200 mm max.</dd>
+                  </div>
+                  <div>
+                    <dt>Tread / run</dt>
+                    <dd>250 mm min.</dd>
+                  </div>
+                  <div>
+                    <dt>Width, occupant load over 50</dt>
+                    <dd>1.10 m min.</dd>
+                  </div>
+                  <div>
+                    <dt>Width, occupant load 50 or less</dt>
+                    <dd>0.90 m min.</dd>
+                  </div>
+                  <div>
+                    <dt>Private stair, under 10 occupants</dt>
+                    <dd>0.75 m min.</dd>
+                  </div>
+                  <div>
+                    <dt>Headroom</dt>
+                    <dd>2.00 m min.</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Keep risers and treads uniform within a flight. Add handrails on both sides of
+                  wider stairs.
+                </p>
+                <p class="standard-cite">PD 1096 · Rule XII §1207</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">♿</span>
+                  <div>
+                    <p class="eyebrow">ACCESSIBILITY</p>
+                    <h2>Accessible design</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Ramp gradient</dt>
+                    <dd>1:12 max.</dd>
+                  </div>
+                  <div>
+                    <dt>Ramp width</dt>
+                    <dd>1.20 m min.</dd>
+                  </div>
+                  <div>
+                    <dt>Ramp length between landings</dt>
+                    <dd>6.00 m max.</dd>
+                  </div>
+                  <div>
+                    <dt>Landing / turning space</dt>
+                    <dd>1.50 × 1.50 m</dd>
+                  </div>
+                  <div>
+                    <dt>Handrails (dual height)</dt>
+                    <dd>0.70 m and 0.90 m</dd>
+                  </div>
+                  <div>
+                    <dt>Door clear opening</dt>
+                    <dd>0.80 m min.</dd>
+                  </div>
+                  <div>
+                    <dt>Accessible toilet cubicle</dt>
+                    <dd>1.70 × 1.80 m min.</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Applies to the building types listed in BP 344. Coordinate the full accessible
+                  route, not just individual elements.
+                </p>
+                <p class="standard-cite">BP 344 · IRR Annex A</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">▭</span>
+                  <div>
+                    <p class="eyebrow">PARKING</p>
+                    <h2>Parking stalls</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Standard car stall</dt>
+                    <dd>2.50 × 5.00 m</dd>
+                  </div>
+                  <div>
+                    <dt>Accessible stall</dt>
+                    <dd>3.70 × 5.00 m</dd>
+                  </div>
+                  <div>
+                    <dt>Two-way driveway</dt>
+                    <dd>6.00 m typical</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Stall counts depend on occupancy and local ordinance. Also check the turning
+                  radius and ramp slope for basements.
+                </p>
+                <p class="standard-cite">PD 1096 IRR · Rule VII · BP 344</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">⌂</span>
+                  <div>
+                    <p class="eyebrow">SITE</p>
+                    <h2>Setbacks and open space</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Lot coverage / open space</dt>
+                    <dd>By use and lot type</dd>
+                  </div>
+                  <div>
+                    <dt>Front, side and rear setbacks</dt>
+                    <dd>By road width and zoning</dd>
+                  </div>
+                  <div>
+                    <dt>Firewall on property line</dt>
+                    <dd>Per Rule VII</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  These values vary by zoning class and lot type. Use the IRR tables and the local
+                  zoning ordinance for the actual numbers.
+                </p>
+                <p class="standard-cite">PD 1096 IRR · Rule VII</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">⌂</span>
+                  <div>
+                    <p class="eyebrow">KITCHEN</p>
+                    <h2>Kitchen layout</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Counter height</dt>
+                    <dd>850–900 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Counter depth</dt>
+                    <dd>600 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Upper cabinet above counter</dt>
+                    <dd>450–600 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Work aisle, one cook</dt>
+                    <dd>1,000–1,200 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Work triangle, total of 3 legs</dt>
+                    <dd>4.0–7.9 m</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Keep the sink, cooktop and fridge triangle free of through-traffic.
+                </p>
+                <p class="standard-cite">Planning practice</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">◌</span>
+                  <div>
+                    <p class="eyebrow">BATHROOM</p>
+                    <h2>Fixture clearances</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>WC centreline to side wall</dt>
+                    <dd>380–450 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Clear space in front of WC</dt>
+                    <dd>≥ 600 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Lavatory rim height</dt>
+                    <dd>800–850 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Shower, minimum</dt>
+                    <dd>900 × 900 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Accessible WC seat height</dt>
+                    <dd>450 mm</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Plan the fixture rough-ins together with the plumbing stacks and floor drains.
+                </p>
+                <p class="standard-cite">Planning practice · BP 344</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">▥</span>
+                  <div>
+                    <p class="eyebrow">OPENINGS</p>
+                    <h2>Windows and sills</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Typical sill height</dt>
+                    <dd>900 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Window head height</dt>
+                    <dd>2,100 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Standard door height</dt>
+                    <dd>2,100 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Glazing near floor or doors</dt>
+                    <dd>Safety glass</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Line up window and door heads for a cleaner elevation. Check fire separation on
+                  walls near property lines.
+                </p>
+                <p class="standard-cite">Planning practice</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">⊓</span>
+                  <div>
+                    <p class="eyebrow">SAFETY</p>
+                    <h2>Railings and guards</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Stair handrail height</dt>
+                    <dd>800–900 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Balcony / landing guard</dt>
+                    <dd>≈ 1,000 mm (verify)</dd>
+                  </div>
+                  <div>
+                    <dt>Guard baluster opening</dt>
+                    <dd>< 100 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Handrail grip size</dt>
+                    <dd>32–50 mm</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Required wherever there is a drop. Avoid horizontal rails that children can climb.
+                </p>
+                <p class="standard-cite">NBC §1207 · planning practice</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">▦</span>
+                  <div>
+                    <p class="eyebrow">STRUCTURE</p>
+                    <h2>Preliminary member sizes</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Residential slab thickness</dt>
+                    <dd>100–125 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Beam depth (simple span)</dt>
+                    <dd>≈ span ÷ 12</dd>
+                  </div>
+                  <div>
+                    <dt>Typical small column</dt>
+                    <dd>≥ 250 × 250 mm</dd>
+                  </div>
+                  <div>
+                    <dt>CHB wall reinforcement</dt>
+                    <dd>Ø10 @ 600–800 mm</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Rules of thumb for early sketches only. A licensed engineer must design to NSCP
+                  2015.
+                </p>
+                <p class="standard-cite">NSCP 2015 · rule of thumb</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">⚡</span>
+                  <div>
+                    <p class="eyebrow">SERVICES</p>
+                    <h2>Electrical heights</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Convenience outlet above floor</dt>
+                    <dd>300 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Light switch</dt>
+                    <dd>1,200–1,400 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Accessible switches and controls</dt>
+                    <dd>≤ 1,200 mm</dd>
+                  </div>
+                  <div>
+                    <dt>Kitchen counter outlets</dt>
+                    <dd>1,100 mm</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Keep outlets away from wet areas or use GFCI. Coordinate the panel board location
+                  early.
+                </p>
+                <p class="standard-cite">PEC 2017 · BP 344</p>
+              </article>
+              <article class="standard-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">⇆</span>
+                  <div>
+                    <p class="eyebrow">FIRE SAFETY</p>
+                    <h2>Exits and fire safety</h2>
+                  </div>
+                </div>
+                <dl class="dimension-list">
+                  <div>
+                    <dt>Exits from most floors</dt>
+                    <dd>2 minimum</dd>
+                  </div>
+                  <div>
+                    <dt>Exit doors</dt>
+                    <dd>Swing outward, with travel</dd>
+                  </div>
+                  <div>
+                    <dt>Exit signs and emergency lights</dt>
+                    <dd>Required</dd>
+                  </div>
+                  <div>
+                    <dt>Travel distance, dead ends</dt>
+                    <dd>By occupancy table</dd>
+                  </div>
+                </dl>
+                <p class="standard-note">
+                  Travel distance and occupant-load limits depend on the occupancy. Use the RA 9514
+                  IRR tables and get BFP review.
+                </p>
+                <p class="standard-cite">RA 9514 · Fire Code IRR</p>
+              </article>
+            </div>
+          </section>
+          <section class="code-reference-section">
+            <div class="code-section-heading">
+              <div>
+                <p class="eyebrow">PHILIPPINES · CODE CONTEXT</p>
+                <h2>Items to verify before you draw.</h2>
+              </div>
+              <span class="code-scope-tag">REFERENCE ONLY</span>
+            </div>
+            <p class="code-section-intro">
+              Use current, locally adopted regulations and project-specific requirements for final
+              dimensions. These references are a starting point for coordination, not a substitute
+              for code review or professional design.
+            </p>
+            <div class="standards-grid">
+              <article class="standard-card code-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">§</span>
+                  <div>
+                    <p class="eyebrow">BUILDING RULES</p>
+                    <h2>National Building Code</h2>
+                  </div>
+                </div>
+                <ul class="code-check-list">
+                  <li>Confirm occupancy classification and allowable room use.</li>
+                  <li>Check light, ventilation, exit access, and required clear widths.</li>
+                  <li>Verify the current local adoption and amendments.</li>
+                </ul>
+                <a
+                  class="code-source"
+                  href="https://www.dpwh.gov.ph/DPWH/references/laws_codes_orders"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >DPWH laws and codes ↗</a
+                >
+              </article>
+              <article class="standard-card code-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">♿</span>
+                  <div>
+                    <p class="eyebrow">ACCESSIBILITY</p>
+                    <h2>BP 344 and IRR</h2>
+                  </div>
+                </div>
+                <ul class="code-check-list">
+                  <li>Review accessible routes, door clearances, ramps, and turning space.</li>
+                  <li>Coordinate accessible facilities and signage where required.</li>
+                  <li>Use the current implementing rules for the project.</li>
+                </ul>
+                <a
+                  class="code-source"
+                  href="https://www.ncda.gov.ph/disability-laws/batas-pambansa/batas-pambansa-blg-344/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >NCDA · BP 344 ↗</a
+                >
+              </article>
+              <article class="standard-card code-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">🔥</span>
+                  <div>
+                    <p class="eyebrow">FIRE CODE</p>
+                    <h2>RA 9514 · Fire Code of the Philippines</h2>
+                  </div>
+                </div>
+                <ul class="code-check-list">
+                  <li>Classify the occupancy and compute occupant load.</li>
+                  <li>Check exits, travel distance, fire separations and protection systems.</li>
+                  <li>Secure the Fire Safety Evaluation Clearance before the building permit.</li>
+                </ul>
+                <a
+                  class="code-source"
+                  href="https://bfp.gov.ph"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Bureau of Fire Protection ↗</a
+                >
+              </article>
+              <article class="standard-card code-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">▦</span>
+                  <div>
+                    <p class="eyebrow">STRUCTURAL</p>
+                    <h2>NSCP 2015 · Structural Code</h2>
+                  </div>
+                </div>
+                <ul class="code-check-list">
+                  <li>Design loads, seismic and wind per Volume 1.</li>
+                  <li>Concrete, steel and masonry member design.</li>
+                  <li>Structural plans must be signed by a licensed civil engineer.</li>
+                </ul>
+                <span class="code-source is-muted">ASEP publication</span>
+              </article>
+              <article class="standard-card code-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">⚡</span>
+                  <div>
+                    <p class="eyebrow">ELECTRICAL</p>
+                    <h2>PEC 2017 · Electrical Code</h2>
+                  </div>
+                </div>
+                <ul class="code-check-list">
+                  <li>Branch circuits, outlet spacing and wet-area protection.</li>
+                  <li>Panel board location and clearances.</li>
+                  <li>Plans signed by a Professional Electrical Engineer.</li>
+                </ul>
+                <span class="code-source is-muted">IIEE publication</span>
+              </article>
+              <article class="standard-card code-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">◌</span>
+                  <div>
+                    <p class="eyebrow">PLUMBING</p>
+                    <h2>National Plumbing Code</h2>
+                  </div>
+                </div>
+                <ul class="code-check-list">
+                  <li>Fixture counts by occupancy.</li>
+                  <li>Drainage, venting and septic tank requirements.</li>
+                  <li>Water supply sizing and fixture rough-ins.</li>
+                </ul>
+                <span class="code-source is-muted">RA 1378 · Revised NPC</span>
+              </article>
+              <article class="standard-card code-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">♻</span>
+                  <div>
+                    <p class="eyebrow">SUSTAINABILITY</p>
+                    <h2>Philippine Green Building Code</h2>
+                  </div>
+                </div>
+                <ul class="code-check-list">
+                  <li>Energy efficiency, water efficiency and materials.</li>
+                  <li>Applies to buildings above the size thresholds in the code.</li>
+                  <li>Referral code of PD 1096.</li>
+                </ul>
+                <a
+                  class="code-source"
+                  href="https://www.dpwh.gov.ph/DPWH/references/laws_codes_orders"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >DPWH references ↗</a
+                >
+              </article>
+              <article class="standard-card code-card">
+                <div class="standard-card-heading">
+                  <span class="standard-icon" aria-hidden="true">⌖</span>
+                  <div>
+                    <p class="eyebrow">ZONING</p>
+                    <h2>Local zoning ordinance</h2>
+                  </div>
+                </div>
+                <ul class="code-check-list">
+                  <li>Allowed use, height limits and floor-area ratio.</li>
+                  <li>Setbacks and parking requirements beyond the NBC.</li>
+                  <li>Locational clearance comes before the building permit.</li>
+                </ul>
+                <span class="code-source is-muted">City / municipal planning office</span>
+              </article>
+            </div>
           </section>
         </section>
 
-        <section class="chb-calculator-view" id="chb-calculator-view" aria-labelledby="chb-title" hidden>
-          <div class="standards-heading"><div><p class="eyebrow">CONCRETE HOLLOW BLOCK TAKE-OFF</p><h1 id="chb-title">Estimate your CHB quantity.</h1><p class="subheading">Estimate concrete hollow blocks for a wall area, subtracting openings and adding a cutting allowance.</p></div><span class="standards-unit">BLOCKS · m² · mm</span></div>
-          <div class="standards-notice" role="note"><span class="notice-mark" aria-hidden="true">!</span><p><strong>Quantity estimate only.</strong> The default 400 × 200 mm face is a nominal planning module (commonly a 390 × 190 mm block plus mortar joints). Actual products and joint sizes vary. This does not calculate mortar, reinforcement, grout, structural capacity, or code compliance; confirm with your supplier and project professional.</p></div>
-          <div class="chb-layout">
-            <form class="chb-form standard-card" id="chb-form"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">▧</span><div><p class="eyebrow">WALL &amp; BLOCK DETAILS</p><h2>Enter dimensions</h2></div></div>
-              <div class="chb-input-grid">
-                <div class="form-group"><label class="field-label" for="chb-wall-width">Wall width</label><div class="input-wrap"><input id="chb-wall-width" type="number" min="0.01" step="0.01" value="1" required data-unit="m"><span>m</span></div></div>
-                <div class="form-group"><label class="field-label" for="chb-wall-height">Wall height</label><div class="input-wrap"><input id="chb-wall-height" type="number" min="0.01" step="0.01" value="1" required data-unit="m"><span>m</span></div></div>
-                <div class="form-group"><label class="field-label" for="chb-length">CHB module length</label><div class="input-wrap"><input id="chb-length" type="number" min="1" step="1" value="400" required data-unit="mm"><span>mm</span></div></div>
-                <div class="form-group"><label class="field-label" for="chb-height">CHB module height</label><div class="input-wrap"><input id="chb-height" type="number" min="1" step="1" value="200" required data-unit="mm"><span>mm</span></div></div>
-                <div class="form-group"><label class="field-label" for="chb-openings">Total openings area <small>optional</small></label><div class="input-wrap"><input id="chb-openings" type="number" min="0" step="0.01" value="0" required data-unit="m²"><span>m²</span></div></div>
-                <div class="form-group"><label class="field-label" for="chb-waste">Cutting / breakage allowance</label><div class="input-wrap"><input id="chb-waste" type="number" min="0" max="100" step="1" value="5" required><span>%</span></div></div>
-              </div><button class="primary-button chb-calculate-button" type="submit">Calculate CHB quantity <span aria-hidden="true">↗</span></button>
-            </form>
-            <section class="standard-card chb-result-card" aria-labelledby="chb-result-title" aria-live="polite" aria-atomic="true"><div class="standard-card-heading"><span class="standard-icon" aria-hidden="true">#</span><div><p class="eyebrow">ESTIMATED QUANTITY</p><h2 id="chb-result-title">Blocks to prepare</h2></div></div><p class="chb-result-number"><strong id="chb-total">14</strong><span>CHB</span></p><p class="chb-result-detail" id="chb-result-detail">For 1.00 m²: about 12.5 blocks by area, or 14 blocks including 5% allowance.</p><dl class="chb-breakdown"><div><dt>Net wall area</dt><dd id="chb-net-area">1.00 m²</dd></div><div><dt>Coverage per block module</dt><dd id="chb-module-area">0.080 m²</dd></div><div><dt>Base quantity (before allowance)</dt><dd id="chb-base-count">12.5 blocks</dd></div></dl><p class="standard-note">Rounded up to whole blocks after applying the allowance. For a 1 m² wall using a 400 × 200 mm module: 12.5 blocks theoretically; plan about 14 with 5% allowance.</p></section>
+        <section
+          class="chb-calculator-view"
+          id="chb-calculator-view"
+          aria-labelledby="chb-title"
+          hidden
+        >
+          <div class="standards-heading">
+            <div>
+              <p class="eyebrow">CONCRETE HOLLOW BLOCK TAKE-OFF</p>
+              <h1 id="chb-title">Estimate your CHB quantity.</h1>
+              <p class="subheading">
+                Estimate concrete hollow blocks for a wall area, subtracting openings and adding a
+                cutting allowance.
+              </p>
+            </div>
+            <span class="standards-unit">BLOCKS · m² · mm</span>
           </div>
-          <section class="standard-card estimator-visual" aria-labelledby="chb-visual-title"><div class="visual-head"><div><p class="eyebrow">VISUALISATION</p><h2 id="chb-visual-title">Watch the wall go up</h2></div><button type="button" class="ghost-button" id="chb-replay">▶ Replay</button></div><div class="visual-stage" id="chb-visual"></div><p class="standard-note">Drawn to scale in running bond. Each block is one CHB module, and the opening is cut from the centre.</p></section>
+          <div class="standards-notice" role="note">
+            <span class="notice-mark" aria-hidden="true">!</span>
+            <p>
+              <strong>Quantity estimate only.</strong> The default 400 × 200 mm face is a nominal
+              planning module (commonly a 390 × 190 mm block plus mortar joints). Actual products
+              and joint sizes vary. This does not calculate mortar, reinforcement, grout, structural
+              capacity, or code compliance; confirm with your supplier and project professional.
+            </p>
+          </div>
+          <div class="chb-layout">
+            <form class="chb-form standard-card" id="chb-form">
+              <div class="standard-card-heading">
+                <span class="standard-icon" aria-hidden="true">▧</span>
+                <div>
+                  <p class="eyebrow">WALL &amp; BLOCK DETAILS</p>
+                  <h2>Enter dimensions</h2>
+                </div>
+              </div>
+              <div class="chb-input-grid">
+                <div class="form-group">
+                  <label class="field-label" for="chb-wall-width">Wall width</label>
+                  <div class="input-wrap">
+                    <input
+                      id="chb-wall-width"
+                      type="number"
+                      min="0.01"
+                      step="0.01"
+                      value="1"
+                      required
+                      data-unit="m"
+                    /><span>m</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="field-label" for="chb-wall-height">Wall height</label>
+                  <div class="input-wrap">
+                    <input
+                      id="chb-wall-height"
+                      type="number"
+                      min="0.01"
+                      step="0.01"
+                      value="1"
+                      required
+                      data-unit="m"
+                    /><span>m</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="field-label" for="chb-length">CHB module length</label>
+                  <div class="input-wrap">
+                    <input
+                      id="chb-length"
+                      type="number"
+                      min="1"
+                      step="1"
+                      value="400"
+                      required
+                      data-unit="mm"
+                    /><span>mm</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="field-label" for="chb-height">CHB module height</label>
+                  <div class="input-wrap">
+                    <input
+                      id="chb-height"
+                      type="number"
+                      min="1"
+                      step="1"
+                      value="200"
+                      required
+                      data-unit="mm"
+                    /><span>mm</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="field-label" for="chb-openings"
+                    >Total openings area <small>optional</small></label
+                  >
+                  <div class="input-wrap">
+                    <input
+                      id="chb-openings"
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      value="0"
+                      required
+                      data-unit="m²"
+                    /><span>m²</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="field-label" for="chb-waste">Cutting / breakage allowance</label>
+                  <div class="input-wrap">
+                    <input
+                      id="chb-waste"
+                      type="number"
+                      min="0"
+                      max="100"
+                      step="1"
+                      value="5"
+                      required
+                    /><span>%</span>
+                  </div>
+                </div>
+              </div>
+              <button class="primary-button chb-calculate-button" type="submit">
+                Calculate CHB quantity <span aria-hidden="true">↗</span>
+              </button>
+            </form>
+            <section
+              class="standard-card chb-result-card"
+              aria-labelledby="chb-result-title"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              <div class="standard-card-heading">
+                <span class="standard-icon" aria-hidden="true">#</span>
+                <div>
+                  <p class="eyebrow">ESTIMATED QUANTITY</p>
+                  <h2 id="chb-result-title">Blocks to prepare</h2>
+                </div>
+              </div>
+              <p class="chb-result-number"><strong id="chb-total">14</strong><span>CHB</span></p>
+              <p class="chb-result-detail" id="chb-result-detail">
+                For 1.00 m²: about 12.5 blocks by area, or 14 blocks including 5% allowance.
+              </p>
+              <dl class="chb-breakdown">
+                <div>
+                  <dt>Net wall area</dt>
+                  <dd id="chb-net-area">1.00 m²</dd>
+                </div>
+                <div>
+                  <dt>Coverage per block module</dt>
+                  <dd id="chb-module-area">0.080 m²</dd>
+                </div>
+                <div>
+                  <dt>Base quantity (before allowance)</dt>
+                  <dd id="chb-base-count">12.5 blocks</dd>
+                </div>
+              </dl>
+              <p class="standard-note">
+                Rounded up to whole blocks after applying the allowance. For a 1 m² wall using a 400
+                × 200 mm module: 12.5 blocks theoretically; plan about 14 with 5% allowance.
+              </p>
+            </section>
+          </div>
+          <section class="standard-card estimator-visual" aria-labelledby="chb-visual-title">
+            <div class="visual-head">
+              <div>
+                <p class="eyebrow">VISUALISATION</p>
+                <h2 id="chb-visual-title">Watch the wall go up</h2>
+              </div>
+              <button type="button" class="ghost-button" id="chb-replay">▶ Replay</button>
+            </div>
+            <div class="visual-stage" id="chb-visual"></div>
+            <p class="standard-note">
+              Drawn to scale in running bond. Each block is one CHB module, and the opening is cut
+              from the centre.
+            </p>
+          </section>
         </section>
-        <section class="chb-calculator-view" id="estimator-view" aria-live="polite" hidden></section>
-        <footer class="page-footer"><span>DATUM <span class="footer-separator">/</span> MEASURE WITH CARE</span><span>Measurements are estimates, not survey-grade readings.</span></footer>
+        <section
+          class="chb-calculator-view"
+          id="estimator-view"
+          aria-live="polite"
+          hidden
+        ></section>
+        <footer class="page-footer">
+          <span>DATUM <span class="footer-separator">/</span> MEASURE WITH CARE</span
+          ><span>Measurements are estimates, not survey-grade readings.</span
+          ><span>Built by J.A.B</span>
+        </footer>
       </main>
     </div>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>

@@ -1,4 +1,5 @@
 import { tools, defaultTool } from './config/tools.js';
+import { toolSteps } from './config/tool-steps.js';
 import { searchStandardGuides } from './config/standard-search.js';
 import { createAppState } from './core/state.js';
 import { getUnits, setUnits, onUnitsChange, syncInputs, setMetricValue, convertText, convertMarkup, toDisplay, unitLabel } from './core/units.js';
@@ -57,6 +58,59 @@ function showToast(message) {
   clearTimeout(state.toastTimer);
   state.toastTimer = setTimeout(() => elements.toast.classList.remove("show"), 2600);
 }
+
+const howtoSteps = document.getElementById("howto-steps");
+const howtoPlay = document.getElementById("howto-play");
+const STEP_MS = 3200;
+let stepTimer = null;
+let activeStep = 0;
+let stepsPlaying = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function setActiveStep(index) {
+  const items = howtoSteps.children;
+  if (!items.length) return;
+  activeStep = (index + items.length) % items.length;
+  [...items].forEach((item, i) => {
+    item.classList.toggle("is-active", i === activeStep);
+    item.classList.toggle("is-done", i < activeStep);
+  });
+}
+
+function scheduleSteps() {
+  clearInterval(stepTimer);
+  howtoSteps.classList.toggle("is-playing", stepsPlaying);
+  howtoPlay.textContent = stepsPlaying ? "❚❚" : "▶";
+  howtoPlay.setAttribute("aria-label", stepsPlaying ? "Pause step walkthrough" : "Play step walkthrough");
+  if (stepsPlaying) stepTimer = setInterval(() => setActiveStep(activeStep + 1), STEP_MS);
+}
+
+function restartSteps() {
+  setActiveStep(0);
+  // Retrigger the progress bar animation on the first step.
+  howtoSteps.classList.remove("is-playing");
+  void howtoSteps.offsetWidth;
+  scheduleSteps();
+}
+
+function renderSteps(toolName) {
+  const steps = toolSteps[toolName] || [];
+  howtoSteps.innerHTML = steps
+    .map((text, i) => `<li style="--i:${i}"><button type="button" data-step="${i}"><span class="howto-num">${i + 1}</span><span class="howto-text">${text}</span></button><span class="howto-bar" aria-hidden="true"></span></li>`)
+    .join("");
+  restartSteps();
+}
+
+howtoSteps.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-step]");
+  if (!button) return;
+  setActiveStep(Number(button.dataset.step));
+  scheduleSteps();
+});
+
+howtoPlay.addEventListener("click", () => {
+  stepsPlaying = !stepsPlaying;
+  scheduleSteps();
+});
 
 // value may be a full-precision number (formatted to `digits`) or a ready-made string.
 function updateResult(value, unit, detail, digits = 2) {
@@ -196,6 +250,7 @@ function renderTool(toolName) {
   }
 
   elements.disclaimer.textContent = tool.disclaimer;
+  renderSteps(toolName);
   elements.hudCaption.textContent =
     toolName === "rangefinder"
       ? "TILT ANGLE"
@@ -806,6 +861,8 @@ document.getElementById("help-button").addEventListener("click", () => {
     showToast("Use these as early-planning references only. Confirm dimensions against your local building and accessibility codes.");
     return;
   }
+  document.getElementById("howto").scrollIntoView({ behavior: "smooth", block: "center" });
+  restartSteps();
   showToast(tools[state.activeTool].disclaimer);
 });
 window.addEventListener("pagehide", () => {
